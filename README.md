@@ -10,7 +10,7 @@ Blaupunkt TV connected to Samsung DVB-T2 STB. Blaupunk remote can not control ST
 
 ### Parts
 
-- Arduino Leonardo Pro Micro 3.3V
+- Arduino Leonardo Pro Micro 3.3V - board will be powered from TV's USB port
 
 #### Vishay IR receiver
 - 104 capacitor - 0.1uF
@@ -28,6 +28,8 @@ Blaupunkt TV connected to Samsung DVB-T2 STB. Blaupunk remote can not control ST
 ### Result
 
 IR diode legs will be adjusted after placement test
+
+![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r6.jpg)
 
 ![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r5.jpg)
 
