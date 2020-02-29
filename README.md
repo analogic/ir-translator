@@ -29,8 +29,12 @@ Blaupunkt TV connected to Samsung DVB-T2 STB. Blaupunk remote can not control ST
 
 IR diode legs will be adjusted after placement test
 
-![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r5.jpg
-![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r4.jpg
-![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r3.jpg
-![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r2.jpg
-![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r1.jpg
+![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r5.jpg)
+
+![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r4.jpg)
+
+![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r3.jpg)
+
+![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r2.jpg)
+
+![Arduino IR translator](https://raw.githubusercontent.com/analogic/ir-translator/master/doc/r1.jpg)
