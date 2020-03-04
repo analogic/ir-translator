@@ -1,6 +1,6 @@
 #include "src/IRremote/IRremote.h"
 
-int RECV_PIN = 0;
+int RECV_PIN = 7;
 
 IRrecv irrecv(RECV_PIN);
 IRsend irsend;
@@ -46,7 +46,7 @@ void dump(decode_results * results) {
 }
 
 void setup() {
-  Serial.begin(9600);
+  ///Serial.begin(9600);
   irrecv.enableIRIn(); // Start the receiver
 }
 
@@ -54,19 +54,17 @@ int on = 0;
 unsigned long last = millis();
 
 void loop() {
-  Serial.println("Waiting for input...");
 
   if (irrecv.decode( & results)) {
     // If it's been at least 1/4 second since the last
     // IR received, toggle the relay
-    dump(&results);
+    ///dump(&results);
 
     if ((results.value == 0xE0E040BF || results.value == 0x753CD54D) && millis() - last > 250) {
-      Serial.println("2");
+      ////Serial.println("2");
       last = millis();
 
-// TODO
-      unsigned int rawData[] = {4550,4400,600,1650,550,1650,600,1650,550,550,600,500,600,550,550,550,600,500,600,1650,600,1600,600,1650,550,550,600,500,600,550,600,500,600,500,650,450,650,1600,600,500,650,450,650,500,600,500,600,500,600,550,600,1600,600,500,650,1600,650,1550,650,1600,650,1550,650,1600,650,1600,600}; 
+      unsigned int rawData[] = {9000,4600, 400,650, 500,650, 450,700, 400,700, 450,650, 450,700, 400,700, 450,650, 450,1800, 450,1800, 450,1800, 400,1800, 450,1850, 400,1800, 450,1800, 450,650, 450,650, 450,1800, 450,650, 450,1800, 450,700, 450,650, 450,650, 450,700, 450,1800, 400,700, 450,1800, 400,700, 450,1800, 400,1850, 450,1800, 400,1800, 450};
       
       irsend.sendRaw(rawData, sizeof(rawData) / sizeof(int), 38);
       delay(40);
@@ -77,9 +75,11 @@ void loop() {
       irsend.sendRaw(rawData, sizeof(rawData) / sizeof(int), 38);
       delay(40);
 
-      Serial.println("6");
+      ///Serial.println("6");
     }
+    irrecv.resume();
     irrecv.enableIRIn(); // Start the receiver
 
   }
+  delay(50);
 }
